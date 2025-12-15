@@ -13,22 +13,18 @@ CivicConnect is a web-based platform that allows citizens to report city issues 
 
 ### **Frontend**
 
-* **Vue.js** (^3.5.25) — progressive framework for building UIs
+* **Vue.js** (^3.5.25) — progressive UI framework
 * **Vite** (^7.2.4) — fast build tool and dev server
 * **Tailwind CSS** (^4.1.18) — utility-first CSS framework
-* **Tailwind CSS Vite** (^4.1.18) — Vite plugin for Tailwind CSS
-* **Axios** (^1.13.2) — HTTP client for API requests
-* **Pinia** (^3.0.4) — state management library
+* **Axios** (^1.13.2) — HTTP client
+* **Pinia** (^3.0.4) — state management
 * **Vue Router** (^4.6.3) — client-side routing
-* **VeeValidate** (^4.15.1) — form validation library
-* **Vue SweetAlert2** (^5.0.11) — beautiful confirmation dialogs
-* **Vue Toastification** (^2.0.0-rc.5) — toast notifications
-* **Vue Loading Overlay** (^6.0.6) — loading spinner component
-* **Heroicons/Vue** (^2.2.0) — heroicons icon library for Vue
-* **ESLint** (^9.39.1) — code linting
-* **Prettier** (^3.6.2) — code formatting
-* **Prettier Plugin Tailwind CSS** (^0.7.2) — Tailwind class sorting for Prettier
-* **Tailwind CSS Motion** (^1.1.1) — animation utilities for Tailwind
+* **VeeValidate** (^4.15.1) — form validation
+* **Vue SweetAlert2** — confirmation dialogs
+* **Vue Toastification** — toast notifications
+* **Vue Loading Overlay** — loading indicators
+* **Heroicons/Vue** — icons
+* **ESLint + Prettier** — linting and formatting
 
 ### **Map**
 
@@ -37,11 +33,11 @@ CivicConnect is a web-based platform that allows citizens to report city issues 
 
 ### **Backend**
 
-* **PHP** (vanilla) — server-side logic
-* **PHPMailer** — email notifications and OTP delivery
-* **Dotenv** (phpdotenv) — environment variable management
-* **Intervention Image** — image optimization and processing
-* **MIME Type Validator** — file security and validation
+* **PHP** (vanilla)
+* **PHPMailer** — email, OTP, verification
+* **Dotenv (phpdotenv)** — environment variables
+* **Intervention Image** — image processing
+* **MIME Type Validator** — upload security
 * **Composer** — PHP dependency manager
 
 ### **Database**
@@ -50,7 +46,7 @@ CivicConnect is a web-based platform that allows citizens to report city issues 
 
 ### **Storage**
 
-* Local storage (`/uploads`) for issue photos
+* Local storage (`/backend/uploads`) for issue images
 
 ---
 
@@ -60,99 +56,49 @@ CivicConnect is a web-based platform that allows citizens to report city issues 
 
 * Submit issues (description, category, location, photo)
 * Upvote existing issues
-* Track status of submitted issues
-* OTP verification for account or login
-* Email verification upon registration
-* Captcha to prevent bot signups
-* Optional chatbot guidance for reporting issues
+* Track issue status
+* Email verification
+* OTP verification (login or sensitive actions)
+* Captcha protection
+* Optional chatbot assistance
 
 ### **Staff**
 
-* Login to staff dashboard (with OTP if desired)
-* Change issue status (Pending → In Progress → Resolved)
-* Audit trail auto-logged
+* Staff dashboard
+* Update issue status (Pending → In Progress → Resolved)
+* Automatic audit trail logging
 * Filter issues by status or upvotes
 
 ### **Admin**
 
-* Login to admin panel
-* Create, update, and delete users
-* Assign roles (Citizen / Staff)
+* Admin dashboard
+* Manage users and roles (Citizen / Staff)
 * View all audit logs
-* Monitor system stats (issues count, status distribution, top upvoted issues)
+* View system statistics
 
 ---
 
 ## **Database Tables**
 
-### **1. users**
+### **users**
 
 `id, name, email, password_hash, role, created_at`
 
-### **2. issues**
+### **issues**
 
 `id, title, description, category, latitude, longitude, photo_path, reported_by, timestamp, status`
 
-### **3. upvotes**
+### **upvotes**
 
 `id, user_id, issue_id, timestamp`
 
-### **4. audit_trail**
+### **audit_trail**
 
 `id, issue_id, staff_id, old_status, new_status, timestamp`
 
 ---
 
-## **Setup**
-
-### **1. Clone Repository**
-
-```bash
-git clone https://github.com/EbadShelby/CivicConnect.git
-```
-
-### **2. Database Setup**
-
-* Create MySQL database `civicconnect`
-* Import `database.sql`
-
-### **3. Configure Backend**
-
-* Inside `backend/`, copy `.env.example` → `.env`
-* Update database credentials and email SMTP settings
-* Install PHP dependencies:
-
-  ```bash
-  cd backend
-  composer install
-  ```
-
-### **4. Start Server**
-
-* Run XAMPP (Apache + MySQL)
-* Access backend endpoints via:
-
-  ```
-  http://localhost/CivicConnect/backend/
-  ```
-
-### **5. Frontend Setup**
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-### **6. Access Frontend**
-
-```
-http://localhost:5173/
-```
-
----
-
-## **Node.js & Environment Requirements**
+## **Environment Requirements**
 
 * **Node.js**: ^20.19.0 or >=22.12.0
 * **npm**: ^11.7.0
@@ -161,11 +107,127 @@ http://localhost:5173/
 
 ---
 
-## **Folder Structure**
+## **VScode Extension Requirements**
+* **Vue (official)**
+* **Todo+**
+* **Eslint**
+* **Prettier**
+* **Tailwind CSS Intellisense**
+
+---
+
+## **Setup & Development Workflow**
+
+### **1. Fork & Clone Repository (Team Members)**
+
+> Team members must **fork** the repository first.
 
 ```bash
+git clone https://github.com/YOUR_USERNAME/CivicConnect.git
+cd CivicConnect
+```
+
+⚠️ Do not clone the main repository directly unless you are the project lead.
+
+---
+
+### **2. Add Upstream Remote (One-Time Setup)**
+
+```bash
+git remote add upstream https://github.com/EbadShelby/CivicConnect.git
+git remote -v
+```
+
+---
+
+### **3. Sync With Main Repository (Before Coding)**
+
+```bash
+git pull upstream main
+```
+
+Always run this before starting new work.
+
+---
+
+### **4. Database Setup**
+
+* Create a MySQL database named `civicconnect`
+* Import `database.sql`
+
+---
+
+### **5. Backend Setup**
+
+```bash
+cd backend
+cp .env.example .env
+composer install
+```
+
+Update `.env` with:
+
+* Database credentials
+* SMTP email settings
+
+Run XAMPP (Apache + MySQL)
+
+Backend base URL:
+
+```
+http://localhost/CivicConnect/backend/
+```
+
+---
+
+### **6. Frontend Setup**
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend URL:
+
+```
+http://localhost:5173/
+```
+
+---
+
+### **7. Commit, Push & Pull Request (Team Members)**
+
+```bash
+git add .
+git commit -m "[frontend] Add issue reporting UI"
+git push origin main
+```
+
+Then:
+
+* Open your fork on GitHub
+* Click **Compare & Pull Request**
+* Describe your changes clearly
+
+All changes must be reviewed before merging.
+
+---
+
+## **Repository Rules**
+
+* Only the project lead merges to `main`
+* Direct pushes to `main` are disabled
+* All changes go through Pull Requests
+* No branching is used in this project
+
+---
+
+## **Folder Structure**
+
+```
 CivicConnect/
-├─ frontend/                # Vue app (UI)
+├─ frontend/                # Vue app
 │  ├─ src/
 │  ├─ public/
 │  └─ package.json
@@ -173,8 +235,8 @@ CivicConnect/
 ├─ backend/                 # PHP API
 │  ├─ api/
 │  ├─ config/
-│  ├─ vendor/               # Composer packages
-│  ├─ uploads/              # Local image storage
+│  ├─ vendor/
+│  ├─ uploads/
 │  └─ .env
 │
 ├─ database.sql
@@ -188,19 +250,18 @@ CivicConnect/
 
 ### **Citizen Flow**
 
-1. Register or log in
-2. Submit an issue using the report form
-3. Select location on the map
-4. Upload a photo (optional)
-5. Other users upvote the issue
-6. Citizen monitors issue status changes
+1. Register and verify email
+2. Log in (OTP if enabled)
+3. Report an issue with map pin
+4. Upload photo (optional)
+5. Track status and receive updates
 
 ### **Staff Flow**
 
-1. Log in to staff panel
-2. View upvoted or recent issues
-3. Change issue status (Pending → In Progress → Resolved)
-4. Audit trail automatically logs action
+1. Log in to staff dashboard
+2. Review reported issues
+3. Update issue status
+4. Actions logged in audit trail
 
 ---
 
