@@ -12,21 +12,43 @@ Project Setup:
 
 Frontend (Vue + Tailwind):
   Core UI:
-    ☐ Build landing page layout
-    ☐ Build login & register pages
-    ☐ Build main dashboard page
-    ☐ Build issue reporting form
-    ☐ Build issue list & filters
-    ☐ Build staff dashboard view
-    ☐ Integrate Heroicons for UI clarity
-    ☐ Add Toast/Alert system using Vue Toastification and SweetAlert2
+    Public/Shared Pages:
+      ☐ Build landing page layout (/)
+      ☐ Build login page (/login)
+      ☐ Build register page (/register)
+      ☐ Build email verification page (/verify-email)
+      ☐ Build OTP verification page (/verify-otp)
+
+    Citizen Pages:
+      ☐ Build citizen dashboard (/dashboard)
+      ☐ Build report issue page (/report)
+      ☐ Build issues map/list page (/issues)
+      ☐ Build issue details page (/issues/:id)
+      ☐ Build profile page (/profile)
+
+    Staff Pages:
+      ☐ Build staff dashboard (/staff/dashboard)
+      ☐ Build issue management page (/staff/issues/:id)
+
+    Admin Pages:
+      ☐ Build admin dashboard (/admin/dashboard)
+      ☐ Build user management page (/admin/users)
+      ☐ Build audit trail page (/admin/audit)
+
+    Support Pages:
+      ☐ Build chatbot page (/help)
+      ☐ Build error pages (404, 403)
+
+    General UI:
+      ☐ Integrate Heroicons for UI clarity
+      ☐ Add Toast/Alert system using Vue Toastification and SweetAlert2
 
   Routing & State:
-    ☐ Set up Vue Router (pages + guards)
+    ☐ Set up Vue Router with all routes (/, /login, /register, /verify-email, /verify-otp, /dashboard, /report, /issues, /issues/:id, /profile, /staff/dashboard, /staff/issues/:id, /admin/dashboard, /admin/users, /admin/audit, /help, /404, /403) + guards (public, citizen, staff, admin)
     ☐ Set up Pinia (auth store, issue store)
 
   Validation:
-    ☐ Add VeeValidate to forms (login, register, issue report)
+    ☐ Add VeeValidate to forms (login, register, issue report, profile, admin user create/edit)
 
   Map Integration:
     ☐ Install & configure Leaflet
@@ -126,6 +148,9 @@ Testing:
   ☐ Test staff permissions
   ☐ Test email notifications (PHPMailer)
   ☐ Test form validation (VeeValidate/Yup)
+  ☐ Test page routing and guards
+  ☐ Test chatbot functionality
+  ☐ Test error pages (404, 403)
 
 Polish & Deployment:
   ☐ Add loading states & error messages
