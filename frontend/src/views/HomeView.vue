@@ -7,10 +7,10 @@
       <div class="mx-auto max-w-2xl space-y-8">
         <!-- Badge -->
         <div
-          class="inline-flex items-center space-x-2 rounded-full border border-neutral-3 bg-neutral-1 px-4 py-2 dark:border-neutral-7 dark:bg-neutral-8"
+          class="inline-flex items-center space-x-2 rounded-full border border-neutral-3 bg-neutral-1 px-4 py-2"
         >
           <span class="h-2 w-2 rounded-full bg-accent-green"></span>
-          <span class="text-sm font-medium text-neutral-7 dark:text-neutral-2">
+          <span class="text-sm font-medium text-neutral-7">
             Join a movement for civic change
           </span>
         </div>
@@ -18,12 +18,12 @@
         <!-- Headline -->
         <div class="space-y-4">
           <h1
-            class="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl text-neutral-9 dark:text-neutral-0"
+            class="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl text-neutral-9"
           >
             Your voice shapes your community
           </h1>
           <p
-            class="text-lg text-neutral-6 dark:text-neutral-3 sm:text-xl leading-relaxed"
+            class="text-lg text-neutral-6 sm:text-xl leading-relaxed"
           >
             Report local issues, track progress, and collaborate with your
             community to build the neighborhoods we all deserve.
@@ -40,7 +40,7 @@
           </RouterLink>
           <RouterLink
             to="/issues"
-            class="inline-flex items-center justify-center rounded-lg border border-neutral-3 bg-neutral-0 px-6 py-3 font-medium text-neutral-9 transition-all hover:bg-neutral-1 dark:border-neutral-7 dark:bg-neutral-8 dark:text-neutral-0 dark:hover:bg-neutral-7 sm:px-8"
+            class="inline-flex items-center justify-center rounded-lg border border-neutral-3 bg-neutral-0 px-6 py-3 font-medium text-neutral-9 transition-all hover:bg-neutral-1 sm:px-8"
           >
             Explore Issues
           </RouterLink>
@@ -48,7 +48,7 @@
 
         <!-- Trust Metric -->
         <div class="pt-8">
-          <p class="text-xs font-semibold uppercase tracking-widest text-neutral-5 dark:text-neutral-4">
+          <p class="text-xs font-semibold uppercase tracking-widest text-neutral-5">
             Trusted by citizens everywhere
           </p>
         </div>
@@ -57,19 +57,19 @@
 
     <!-- Features Section -->
     <section
-      class="border-t border-neutral-2 bg-neutral-1 px-4 py-16 dark:border-neutral-8 dark:bg-neutral-8 sm:py-24"
+      class="border-t border-neutral-2 bg-neutral-1 px-4 py-16 sm:py-24"
     >
       <div class="mx-auto max-w-6xl">
         <div class="space-y-12">
           <!-- Section Header -->
           <div class="space-y-4 text-center">
             <h2
-              class="text-3xl font-bold sm:text-4xl text-neutral-9 dark:text-neutral-0"
+              class="text-3xl font-bold sm:text-4xl text-neutral-9"
             >
               How it works
             </h2>
             <p
-              class="text-lg text-neutral-6 dark:text-neutral-3 mx-auto max-w-2xl"
+              class="text-lg text-neutral-6 mx-auto max-w-2xl"
             >
               Simple, transparent, and effective—change starts here.
             </p>
@@ -81,7 +81,7 @@
           >
             <!-- Feature 1 -->
             <div
-              class="flex flex-col space-y-3 rounded-lg border border-neutral-2 bg-neutral-0 p-6 dark:border-neutral-7 dark:bg-neutral-9"
+              class="flex flex-col space-y-3 rounded-lg border border-neutral-2 bg-neutral-0 p-6"
             >
               <div
                 class="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-blue/10"
@@ -101,11 +101,11 @@
                 </svg>
               </div>
               <h3
-                class="text-lg font-semibold text-neutral-9 dark:text-neutral-0"
+                class="text-lg font-semibold text-neutral-9"
               >
                 Report Issues
               </h3>
-              <p class="text-neutral-6 dark:text-neutral-3 text-sm leading-relaxed">
+              <p class="text-neutral-6 text-sm leading-relaxed">
                 Document problems in your area with photos, location, and
                 detailed descriptions.
               </p>
@@ -113,7 +113,7 @@
 
             <!-- Feature 2 -->
             <div
-              class="flex flex-col space-y-3 rounded-lg border border-neutral-2 bg-neutral-0 p-6 dark:border-neutral-7 dark:bg-neutral-9"
+              class="flex flex-col space-y-3 rounded-lg border border-neutral-2 bg-neutral-0 p-6"
             >
               <div
                 class="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-green/10"
@@ -133,11 +133,11 @@
                 </svg>
               </div>
               <h3
-                class="text-lg font-semibold text-neutral-9 dark:text-neutral-0"
+                class="text-lg font-semibold text-neutral-9"
               >
                 Track Progress
               </h3>
-              <p class="text-neutral-6 dark:text-neutral-3 text-sm leading-relaxed">
+              <p class="text-neutral-6 text-sm leading-relaxed">
                 Get real-time updates as authorities respond and resolve the
                 issues you care about.
               </p>
@@ -145,7 +145,7 @@
 
             <!-- Feature 3 -->
             <div
-              class="flex flex-col space-y-3 rounded-lg border border-neutral-2 bg-neutral-0 p-6 dark:border-neutral-7 dark:bg-neutral-9"
+              class="flex flex-col space-y-3 rounded-lg border border-neutral-2 bg-neutral-0 p-6"
             >
               <div
                 class="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-pink/10"
@@ -165,11 +165,11 @@
                 </svg>
               </div>
               <h3
-                class="text-lg font-semibold text-neutral-9 dark:text-neutral-0"
+                class="text-lg font-semibold text-neutral-9"
               >
                 Community Power
               </h3>
-              <p class="text-neutral-6 dark:text-neutral-3 text-sm leading-relaxed">
+              <p class="text-neutral-6 text-sm leading-relaxed">
                 Amplify your voice—upvote and support issues that matter to
                 your neighbors.
               </p>
@@ -186,11 +186,11 @@
       <div class="mx-auto max-w-2xl space-y-8 text-center">
         <div class="space-y-4">
           <h2
-            class="text-3xl font-bold sm:text-4xl text-neutral-9 dark:text-neutral-0"
+            class="text-3xl font-bold sm:text-4xl text-neutral-9"
           >
             Ready to make a difference?
           </h2>
-          <p class="text-lg text-neutral-6 dark:text-neutral-3">
+          <p class="text-lg text-neutral-6">
             Join thousands of citizens already creating change in their
             communities.
           </p>

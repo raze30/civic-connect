@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col min-h-screen bg-neutral-0 dark:bg-neutral-9 text-neutral-9 dark:text-neutral-0">
+  <div class="flex flex-col min-h-screen bg-neutral-0 text-neutral-9">
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 border-b border-neutral-2 bg-neutral-0 dark:border-neutral-8 dark:bg-neutral-9">
+    <nav class="sticky top-0 z-50 border-b border-neutral-2 bg-neutral-0">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <!-- Logo -->
@@ -84,7 +84,7 @@
           <!-- Mobile Menu Toggle -->
           <button
             @click="mobileMenuOpen = !mobileMenuOpen"
-            class="md:hidden px-2 py-2 text-neutral-9 dark:text-neutral-0"
+            class="md:hidden px-2 py-2 text-neutral-9"
           >
             <svg
               class="w-6 h-6"
@@ -142,7 +142,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-neutral-2 bg-neutral-1 dark:border-neutral-8 dark:bg-neutral-8 py-8">
+    <footer class="border-t border-neutral-2 bg-neutral-1 py-8">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
         <p class="text-neutral-5">
           &copy; 2025 Civic Connect. All rights reserved.
