@@ -1,1 +1,84 @@
-@import 'base.css';
+@import "tailwindcss";
+@plugin "tailwindcss-motion";
+
+/* --- CATPPUCCIN THEMES --- */
+
+/* Light Theme (Latte) - Default */
+@theme {
+  /* Core Neutrals */
+  --color-bg-base: #eff1f5;
+  --color-bg-surface: #ccd0da;
+  --color-text-primary: #4c4f69;
+  --color-text-secondary: #6c6f85;
+  --color-text: var(--color-text-primary);
+  --color-border: var(--color-bg-surface);
+
+  --color-neutral-0: #eff1f5;
+  --color-neutral-1: #e6e9f0;
+  --color-neutral-2: #dcdfea;
+  --color-neutral-3: #ccd0da;
+  --color-neutral-4: #bcc0cc;
+  --color-neutral-5: #acb0be;
+  --color-neutral-6: #9ca0b0;
+  --color-neutral-7: #8c8fa1;
+  --color-neutral-8: #7c7f93;
+  --color-neutral-9: #4c4f69;
+
+  /* Accent Colors */
+  --color-accent-blue: #1e66f5;
+  --color-accent-green: #40a02b;
+  --color-accent-red: #d20f39;
+  --color-accent-yellow: #df8e1d;
+  --color-accent-pink: #ea76cb;
+  --color-accent-lavender: #8839ef;
+
+  /* Status Colors */
+  --color-success: #40a02b;
+  --color-warning: #df8e1d;
+  --color-error: #d20f39;
+  --color-info: #1e66f5;
+
+  /* Fonts */
+  --font-family-sans: "Inter", system-ui, sans-serif;
+  --font-family-serif: "Ubuntu", serif;
+}
+
+/* Dark Theme (Mocha) */
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-bg-base: #1e1e2e;
+    --color-bg-surface: #313244;
+    --color-text-primary: #cdd6f4;
+    --color-text-secondary: #a6adc8;
+    --color-text: var(--color-text-primary);
+    --color-border: var(--color-bg-surface);
+
+    --color-neutral-0: #313244;
+    --color-neutral-1: #45475a;
+    --color-neutral-2: #585b70;
+    --color-neutral-3: #6c7086;
+    --color-neutral-4: #7f849c;
+    --color-neutral-5: #9399b2;
+    --color-neutral-6: #a6adc8;
+    --color-neutral-7: #bac2de;
+    --color-neutral-8: #cdd6f4;
+    --color-neutral-9: #1e1e2e;
+
+    --color-accent-blue: #89b4fa;
+    --color-accent-green: #a6e3a1;
+    --color-accent-red: #f38ba8;
+    --color-accent-yellow: #f9e2af;
+    --color-accent-pink: #f5c2e7;
+    --color-accent-lavender: #cba6f7;
+
+    --color-success: #a6e3a1;
+    --color-warning: #f9e2af;
+    --color-error: #f38ba8;
+    --color-info: #89b4fa;
+  }
+}
+
+/* Font imports */
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+}
